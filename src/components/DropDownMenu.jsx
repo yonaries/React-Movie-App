@@ -1,14 +1,14 @@
 import React from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useLocation, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import logOut from "./Auth/functions/sign-out";
-import { useAuthState, useSignOut } from "react-firebase-hooks/auth";
 import { auth } from "../config/firebaseConfig";
+import logOut from "./Auth/functions/sign-out";
 
 function DropDownMenu({ setOpened }) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   return (
     <Menu>
       <ul>

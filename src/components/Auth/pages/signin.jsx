@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 
 import { SignInWith } from "../functions/signIn-with";
 import "./style.css";
@@ -10,7 +9,6 @@ function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const dispatch = useDispatch();
 
   async function submitHandler(event) {
     event.preventDefault();
@@ -33,7 +31,7 @@ function SignIn() {
               <h1>Sign In</h1>
               <span>
                 Don't have an account?{" "}
-                <a onClick={() => navigate("/signup")}>Sign up</a>
+                <p onClick={() => navigate("/signup")}>Sign up</p>
               </span>
             </div>
             <div className="form">
@@ -61,12 +59,6 @@ function SignIn() {
                   {loading ? `Signing in` : "Sign in"}
                 </button>
               </form>
-            </div>
-            <div className="card_title">
-              <span>
-                Do you want to visit without Account?
-                <a onClick={() => navigate("/")}>Visit</a>
-              </span>
             </div>
           </div>
         </div>

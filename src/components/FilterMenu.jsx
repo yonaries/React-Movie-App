@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useQuery } from "../hooks/useQuery";
-import { useDispatch } from "react-redux";
-import { getFilteredMovies } from "../actions/movies";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+import { useQuery } from "../hooks/useQuery";
 
 function FilterMenu() {
   const [genre, setGenre] = useState();

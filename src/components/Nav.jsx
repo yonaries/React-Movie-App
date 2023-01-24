@@ -9,7 +9,7 @@ const Nav = () => {
   const ClickHandler = (e) => {
     const navItems = document.querySelectorAll(".slider-item");
     navItems.forEach((item) => {
-      if (item == e.target) item.classList.add("selected");
+      if (item === e.target) item.classList.add("selected");
       else item.classList.remove("selected");
     });
 

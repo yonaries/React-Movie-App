@@ -33,7 +33,7 @@ function SignUp() {
               <h1>Create Account</h1>
               <span>
                 Already have an account?{" "}
-                <a onClick={() => navigate("/signin")}>Sign In</a>
+                <p onClick={() => navigate("/signin")}>Sign In</p>
               </span>
             </div>
             <div className="form">
@@ -65,12 +65,6 @@ function SignUp() {
                   {loading ? `Signing up` : "Sign up"}
                 </button>
               </form>
-            </div>
-            <div className="card_title">
-              <span>
-                Do you want to visit without Account?
-                <a onClick={() => navigate("/")}>Visit</a>
-              </span>
             </div>
           </div>
         </div>

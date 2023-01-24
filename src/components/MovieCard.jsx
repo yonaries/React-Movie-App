@@ -19,7 +19,7 @@ const MovieCard = ({ movie }) => {
         setIsSafe(false);
       }
     );
-  }, []);
+  }, [imageURL]);
 
   return (
     <Container

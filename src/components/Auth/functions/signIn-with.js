@@ -61,7 +61,7 @@ export class SignInWith {
       return userCredential.user;
     } catch (error) {
       const message =
-        error.code == "auth/user-not-found"
+        error.code === "auth/user-not-found"
           ? "No user account found"
           : "Something went wrong";
       toast.error(message, {

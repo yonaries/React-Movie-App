@@ -22,7 +22,7 @@ const WatchList = ({ title }) => {
     "list"
   );
   const movieQuery = user && query(watchlistRef);
-  const [values, loading, error, snapshot] = useCollectionData(movieQuery);
+  const [values, loading] = useCollectionData(movieQuery);
 
   useEffect(() => {
     let fetchIsDone = false;
@@ -39,7 +39,7 @@ const WatchList = ({ title }) => {
     return () => {
       fetchIsDone = true;
     };
-  }, [values]);
+  }, [values, loading]);
 
   return (
     <Container
