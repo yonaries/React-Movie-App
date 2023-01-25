@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <Container>
-      <img src={logo} onClick={() => navigate("/")} />
+      <img alt="logo" src={logo} onClick={() => navigate("/")} />
       <SearchBar />
       {user ? (
         <>

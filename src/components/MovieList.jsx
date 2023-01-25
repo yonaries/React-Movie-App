@@ -15,7 +15,7 @@ import { useLocation } from "react-router-dom";
 import { useQuery } from "../hooks/useQuery";
 
 const MovieList = ({ movies, title }) => {
-  const [currentMovieList, setCurrentMovieList] = useState([]);
+  const [currentMovieList] = useState([]);
   const location = useLocation();
   const dispatch = useDispatch();
   const containerEl = useRef(null);
@@ -25,7 +25,7 @@ const MovieList = ({ movies, title }) => {
     if (movies.nextPage === 1) {
       fetchMovies(location.pathname);
     }
-  }, [location, movies.nextPage]);
+  }, [location, movies.nextPage, fetchMovies]);
 
   window.onscroll = function () {
     if (containerEl.current !== null) {
