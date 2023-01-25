@@ -3,8 +3,6 @@ import { toast } from "react-toastify";
 import { auth } from "../../../config/firebaseConfig";
 
 export class SignInWith {
-  constructor() {}
-
   static async Provider(provider) {
     try {
       const userCredential = await signInWithPopup(auth, provider);

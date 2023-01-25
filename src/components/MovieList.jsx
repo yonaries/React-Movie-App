@@ -25,7 +25,7 @@ const MovieList = ({ movies, title }) => {
     if (movies.nextPage === 1) {
       fetchMovies(location.pathname);
     }
-  }, [location]);
+  }, [location, movies.nextPage]);
 
   window.onscroll = function () {
     if (containerEl.current !== null) {

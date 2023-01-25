@@ -34,7 +34,7 @@ function FilterMenu() {
     return () => {
       setQuery();
     };
-  }, []);
+  });
 
   return (
     <Container>

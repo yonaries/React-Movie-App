@@ -1,31 +1,17 @@
-import { useState, useEffect } from "react";
-import styled from "styled-components";
+import { useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import styled from "styled-components";
 import logo from "../assets/tmdb.svg";
 import avatar from "../assets/user-286.png";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../config/firebaseConfig";
 import DropDownMenu from "./DropDownMenu";
-import FilterMenu from "./FilterMenu";
-import { useDispatch } from "react-redux";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const [opened, setOpened] = useState(false);
-
-  useEffect(() => {
-    user &&
-      dispatch({
-        type: "SET_USER",
-        payload: {
-          uid: user.uid,
-          displayName: user.displayName,
-        },
-      });
-  }, [user, loading]);
 
   return (
     <Container>

@@ -45,7 +45,7 @@ const MovieDetail = () => {
         setIsSafe(false);
       }
     );
-  }, []);
+  }, [imageURL]);
 
   const addToWatchList = async () => {
     try {
@@ -74,6 +74,7 @@ const MovieDetail = () => {
         bounce: 0.25,
       }}
     >
+      {error && <div></div>}
       {isSafe && <img src={imageURL} alt={movie.original_title} />}
       <div className="card">
         <div>
