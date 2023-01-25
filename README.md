@@ -2,6 +2,8 @@
 
 Movie app build with React and TMDB API
 
+* Deployed link: [https://react-movie-app-smoky.vercel.app/](https://react-movie-app-smoky.vercel.app/)
+
 ### Functionalities
 * Signup
 * Signin
