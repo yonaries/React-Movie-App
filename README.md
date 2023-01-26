@@ -16,4 +16,13 @@ Movie app build with React and TMDB API
 * Sort by Title, Release Date, Popularity
 * Add/Remove to/from Watchlist
 * Toast Notification
-# React-Movie-App
+
+### CCS1R1N2/12
+* Zelalem Zerihun
+* Yonatan Dejene
+* Rewina Zerou
+* Welid Yasin
+* Natnael Legesse
+* Hayat Awel
+* Stephen Yoal
+* Lidiya Fasil
